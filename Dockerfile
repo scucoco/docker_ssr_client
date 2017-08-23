@@ -6,8 +6,8 @@ RUN set -ex \
     && apk --update add --no-cache libsodium py-pip \
     && pip --no-cache-dir install https://github.com/shadowsocksr/shadowsocksr/archive/manyuser.zip
 
-ENV SERVER_ADDR 0.0.0.0
-ENV SERVER_PORT 8388
+ENV SERVER_ADDR 35.187.145.215
+ENV SERVER_PORT 18989
 ENV PASSWORD=
 ENV METHOD aes-256-cfb
 ENV PROTOCOL origin
