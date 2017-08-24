@@ -8,14 +8,16 @@ RUN set -ex \
 
 ENV SERVER_ADDR 35.187.145.215
 ENV SERVER_PORT 18989
-ENV PASSWORD=
+ENV PASSWORD 
+ENV LOCAL 127.0.0.1
+ENV LOCAL_PORT 1080
 ENV METHOD aes-256-cfb
 ENV PROTOCOL origin
 ENV TIMEOUT 300
 ENV OBFS plain
 
 ENTRYPOINT ["/usr/bin/sslocal"]
-CMD ssserver -s "$SERVER_ADDR" \
+CMD sslocal -s "$SERVER_ADDR" \
              -p "$SERVER_PORT" \
              -m "$METHOD"      \
              -k "$PASSWORD"    \
